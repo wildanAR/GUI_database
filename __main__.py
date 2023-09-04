@@ -13,6 +13,7 @@ import database_toko as dt
 from sent_data import publish
 import sys
 cek = 'TWS1000'
+cek = "cek"
 #inisiasi quit button
 quitbtn = 0
 minibtn = 0
