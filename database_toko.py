@@ -2,8 +2,8 @@ import mysql.connector
 from mysql.connector import errorcode
 
 try:
-  mydb = mysql.connector.connect(user='root',
-                                host='localhost',
+  mydb = mysql.connector.connect(user='tokosolusa',
+                                host='192.168.1.8',
                                 password='wildanSAGA7654!',
                                 database='plastik_solusa')
 except mysql.connector.Error as err:
