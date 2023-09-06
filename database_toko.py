@@ -3,8 +3,8 @@ from mysql.connector import errorcode
 
 try:
   mydb = mysql.connector.connect(user='tokosolusa',
-                                host='192.168.1.8',
-                                password='wildanSAGA7654!',
+                                host='192.168.1.29',
+                                password='wildanSAGA7654',
                                 database='plastik_solusa')
 except mysql.connector.Error as err:
   if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:

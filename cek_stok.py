@@ -16,5 +16,5 @@ def stok_habis():
             f.write(f'{produk} tersisa : {etalase}')
             f.write('\n')
         
-
-# stok_habis()
+if __name__ == '__main__':
+    stok_habis()
