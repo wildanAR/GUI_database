@@ -54,7 +54,3 @@ def main():
 
     dict.get(choose_command, lambda: "Invalid")()
 
-
-# run('push','origin')
-# run('status')
-run('add','--all')
