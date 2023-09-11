@@ -54,3 +54,5 @@ def main():
 
     dict.get(choose_command, lambda: "Invalid")()
 
+# run('add','debit.xlsx')
+run('status')
