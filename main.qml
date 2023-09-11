@@ -124,6 +124,8 @@ Rectangle {
         MouseArea {
             anchors.fill: parent
             onClicked: {
+                btnpull.visible = false
+                btnpush.visible = false
                 btngudang.visible = false
                 btndebit.visible = false
                 buttonexit.visible = false
@@ -175,6 +177,8 @@ Rectangle {
                 buttonexit.visible = false
                 btngudang.visible = false
                 btndebit.visible = false
+                btnpull.visible = false
+                btnpush.visible = false
                 
             }
         }
@@ -537,6 +541,8 @@ Rectangle {
         MouseArea {
             anchors.fill: parent
             onClicked: {
+                btnpull.visible = true
+                btnpush.visible = true
                 btngudang.visible = true 
                 btndebit.visible = true
                 buttonexit.visible = true
@@ -571,6 +577,9 @@ Rectangle {
     }
     function produk5(text) {
         n6.text = text;
+    }
+    function pushtext(text) {
+        txtpush.text = text;
     }
 
 
@@ -850,6 +859,8 @@ Rectangle {
         MouseArea {
             anchors.fill: parent
             onClicked: {
+                btnpull.visible = true
+                btnpush.visible = true
                 btngudang.visible = true
                 btndebit.visible = true
                 buttonexit.visible = true
@@ -895,6 +906,8 @@ Rectangle {
         MouseArea {
             anchors.fill: parent
             onClicked: {
+                btnpull.visible = true
+                btnpush.visible = true
                 btnjual.visible = true
                 btngudang.visible = true
                 btndebit.visible = true
@@ -924,6 +937,80 @@ Rectangle {
             width: 30
             height: 30
         }
+    }
+    Rectangle {
+        id:btnpull
+        width: 100
+        height: 50
+        visible:true
+        radius: 50 // customize the radius here
+        color: '#3CB371'
+        anchors {
+            left: parent.left
+            top: parent.top
+            leftMargin: 20
+            topMargin: 50
+        }
+        MouseArea {
+            anchors.fill: parent
+            onClicked: {
+                Aplikasi.pull('git pull')
+            }
+        }
+        Text {
+            text: "Git Pull"
+            color: "black"
+            font.pixelSize: 20
+            anchors.centerIn: parent
+                
+            }
+    }
+    Rectangle {
+        id:txtpushgit
+        height: 50
+        width: 200
+        visible: btnpush.visible
+        radius: 50
+        color: "white"
+        anchors {
+            left:btnpush.right
+            leftMargin: 20
+            top: btnpush.top
+        }
+        Text {
+            id:txtpush
+            text: "tes"
+            color: "black"
+            font.pixelSize: 20
+            anchors.centerIn: parent
+        }
+    }
+    Rectangle {
+        id:btnpush
+        width: 100
+        height: 50
+        visible:true
+        radius: 50 // customize the radius here
+        color: '#3CB371'
+        anchors {
+            left: parent.left
+            top: btnpull.bottom
+            leftMargin: 20
+            topMargin: 20
+        }
+        MouseArea {
+            anchors.fill: parent
+            onClicked: {
+                Aplikasi.push('git push')
+            }
+        }
+        Text {
+            text: "Git Push"
+            color: "black"
+            font.pixelSize: 20
+            anchors.centerIn: parent
+                
+            }
     }
     
 }

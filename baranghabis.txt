@@ -1,26 +1,83 @@
-Sedotan Fresh 6mm tersisa : 5
-Mika GX-4 tersisa : 2
-Keras Nasi Hebat Bunga Besar tersisa : 4
-Kertas Nasi Hebat Bunga Kecil tersisa : 3
-Plastik OPP 10x10 tersisa : 2
-Plastik OPP 10x12 tersisa : 2
-Plastik OPP 12x12 tersisa : 3
-Plastik OPP 14x16 tersisa : 2
-Plastik OPP 8x10 tersisa : 2
-Plastik OPP 8x12 tersisa : 2
-Plastik OPP 8x14 tersisa : 2
-Kresek rodamas 40 tersisa : 4
-Plastik Semar 12x20x03 tersisa : 3
-Plastik Semar 12x20x06 tersisa : 3
-Plastik Semar 15x30x06 tersisa : 3
-Plastik Semar 35x50x03 tersisa : 1
+Plastik AA Bening 10x20 tersisa : 1
+Bening 12x25 tersisa : 1
+Bening 18x30 tersisa : 5
+Bening 20x30 tersisa : 4
+Bening 20x35 tersisa : 0
+Kresek Barista tersisa : -36
+cup cake hitam tersisa : -1
+ZETTA CUP 14 oz tersisa : -41
+zetta cup 16 tersisa : 0
+cup gelas kopi 220ml tersisa : -24
+cup 22 oz ecoplas tersisa : -1
+merak cup 22 oz oval tersisa : -4
+cup sealer 1200 motif tersisa : 4
+cup sealer 1200 polos tersisa : -17
+Plastik Diamond 20x35x03 tersisa : -4
+thinwall DM 2000ml tersisa : 3
+thinwall DM 3000ml tersisa : 2
+Dus Coklat Kraft 18x18 tersisa : -401
+Sedotan Fresh 6mm tersisa : -1
+Mika GX-4 tersisa : -15
+mika GX-5  tersisa : -17
+Plastik HD Bening 10x20 tersisa : 2
+Plastik Burem HD 12x25 tersisa : -23
+Plastik HD Burem 15x30 tersisa : -29
+Plastik HD Burem 18x30 tersisa : 2
+Plastik Buram 20x35 tersisa : 1
+Keras Nasi Hebat Bunga Besar tersisa : 3
+Kertas Nasi Hebat Besar tersisa : 3
+Kertas Nasi Hebat Bunga Kecil tersisa : 2
+Tissue Jolly Softpack 250 tersisa : -49
+Karet Merah tersisa : -1
+kertas nasi gading tersisa : 4
+Lilin magic tersisa : -1
+Lunchbox coklat L tersisa : -2
+Lunchbox M tersisa : -11
+Plastik OPP 10x10 tersisa : -1
+Plastik OPP 10x12 tersisa : -8
+Plastik OPP 12x12 tersisa : -1
+Plastik OPP 14x16 tersisa : -2
+Plastik OPP 8x10 tersisa : 1
+Plastik OPP 8x12 tersisa : 1
+Plastik OPP 8x14 tersisa : 1
+Thinwall OTG 35 tersisa : -16
+Thinwall 1000 Squere tersisa : 4
+Thinwall OTI 650 tersisa : -14
+paper cup 16 motif coklat tersisa : 0
+Kresek Pelita 30 tersisa : 3
+Kresek rodamas 40 tersisa : 0
+Plastik Semar 10x18x06 tersisa : -65
+Plastik Semar 12x20x03 tersisa : 1
+Plastik Semar 12x20x06 tersisa : 1
+Plastik Semar 12x25x06 tersisa : -20
+Plastik Semar 15x30x06 tersisa : 1
+Plastik Semar 18x30x06 tersisa : 4
+Plastik Semar 18x35x06 tersisa : 2
+Plastik Semar 20x30x06 tersisa : 1
+Plastik Semar 30x50x03 tersisa : 0
+Plastik Semar 35x50x02 tersisa : 2
+Plastik Semar 35x50x03 tersisa : 0
 Plastik Semar 40x70x03 tersisa : 2
 Plastik Semar 60x100x04 tersisa : 2
-Plastik Semar 8x15x03 tersisa : 3
-Plastik Semar 8x15x06 tersisa : 4
-Plastik Tomat 12x25 tersisa : 3
-Plastik Tomat 15x30 tersisa : 4
-Plastik Tomat 20x35 tersisa : 4
-Kresek Tomat Bening 15 tersisa : 4
-Tulip Sampah 60x100 tersisa : 3
-Tulip Sampah 80x120 tersisa : 3
+Plastik Semar 7x12x05 tersisa : -1
+Plastik Semar 7x12x06 tersisa : 0
+Plastik Semar 8x15x03 tersisa : 5
+Plastik Semar 8x15x06 tersisa : 3
+Plastik Semar 9x15x06 tersisa : 3
+Plastik Semar 9x18x06 tersisa : -4
+Standing Pouch 16x24 tersisa : 2
+Standing Pouch 9x15 tersisa : -16
+sumpit biasa tersisa : 3
+Plastik Tomat 12x25 tersisa : 0
+Plastik Tomat 15x30 tersisa : -4
+Plastik Tomat 20x35 tersisa : -5
+Kresek Tomat Bening 24 tersisa : 1
+Tray coklat S tersisa : 1
+Tristar Putih 40 tersisa : 0
+Plastik Tulip 15x30 tersisa : -10
+Tulip Sampah 60x100 tersisa : -4
+Tulip Sampah 80x120 tersisa : -9
+Taxi Hitam 15 tersisa : -8
+Taxi Hitam 24 tersisa : -3
+Taxi Putih 15 tersisa : -45
+Taxi Putih 24 tersisa : 3

@@ -54,5 +54,11 @@ def main():
 
     dict.get(choose_command, lambda: "Invalid")()
 
-# run('add','debit.xlsx')
-run('status')
+def push_debit():
+    run('add','debit.xlsx')
+    run('commit','-m','debit edited')
+    run('push','origin')
+    run('status')
+
+def pull_debit():
+    run('pull','origin')

@@ -11,6 +11,7 @@ from cek_stok import stok_habis
 from open_value_excel import get_duit
 import database_toko as dt
 from sent_data import publish
+from git_toko import pull_debit, push_debit
 import sys
 cek = 'TWS1000'
 #inisiasi quit button
@@ -37,6 +38,8 @@ class ListModel(QAbstractListModel):
         return QVariant()
     
 class Aplikasi(QQuickView):
+    txtpush = ""
+    git_push = pyqtSignal(str)
     Quit = pyqtSignal(str)
     Mini = pyqtSignal(str)
     idprdk = pyqtSignal(str)
@@ -63,6 +66,7 @@ class Aplikasi(QQuickView):
         self.jualpcs.connect(vista.produk4)
         self.etalaseproduk.connect(vista.produk5)
         self.list_id.connect(vista.list_id_qml)
+        self.git_push.connect(vista.pushtext)
         list_items = get_id()
         model = ListModel(list_items)
         self.list_id.emit(model)
@@ -73,6 +77,25 @@ class Aplikasi(QQuickView):
        if mini == 'minimize':
           self.showMinimized()
 
+    #push button
+    @pyqtSlot(str)
+    def push(self,value):
+        gitPush = str(value)
+        if gitPush == "git push":
+            try:
+                push_debit()
+                self.git_push.emit('push berhasil')
+            except:
+                self.git_push.emit('tidak ada perubahan')
+    #pull button
+    @pyqtSlot(str)
+    def pull(self,value):
+        gitPull = str(value)
+        if gitPull == "git pull":
+            try:
+                pull_debit()
+            except:
+                print('pull gagal')
 
     # quit button 
     @pyqtSlot('QString')
