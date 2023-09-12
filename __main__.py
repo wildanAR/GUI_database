@@ -11,7 +11,7 @@ from cek_stok import stok_habis
 from open_value_excel import get_duit
 import database_toko as dt
 from sent_data import publish
-from git_toko import pull_debit, push_debit
+from git_toko import pull_debit, push_debit_1, push_debit_2
 from utang import hutangToko
 import sys
 cek = 'TWS1000'
@@ -96,9 +96,10 @@ class Aplikasi(QQuickView):
         gitPush = str(value)
         if gitPush == "git push":
             try:
-                push_debit()
+                push_debit_1()
                 self.git_push.emit('push berhasil')
             except:
+                push_debit_2()
                 self.git_push.emit('tidak ada perubahan')
     #pull button
     @pyqtSlot(str)

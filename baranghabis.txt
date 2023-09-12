@@ -17,7 +17,7 @@ thinwall DM 2000ml tersisa : 3
 thinwall DM 3000ml tersisa : 2
 Dus Coklat Kraft 18x18 tersisa : -401
 Sedotan Fresh 6mm tersisa : -1
-Mika GX-4 tersisa : -15
+Mika GX-4 tersisa : -17
 mika GX-5  tersisa : -17
 Plastik HD Bening 10x20 tersisa : 2
 Plastik Burem HD 12x25 tersisa : -23

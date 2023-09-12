@@ -54,11 +54,18 @@ def branch():
 
 #     dict.get(choose_command, lambda: "Invalid")()
 
-def push_debit():
+def push_debit_1():
     run('add','debit.xlsx')
     run('commit','-m','debit edited')
     run('push','origin')
     run('status')
-
+        # run('push','--set-upstream','origin','master')
+        # run('status')
+        # print('except')
+def push_debit_2():
+    run('push','--set-upstream','origin','master')
+    run('status')
+    print('except')
+    
 def pull_debit():
     run('pull','origin')
