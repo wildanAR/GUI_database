@@ -34,25 +34,25 @@ def branch():
     else:
         print("\nOkay, goodbye!\n")
 
-def main():
+# def main():
 
-    choices = 'clone, commit, branch, pull, merge, blame and stash'
-    print("Commands to use: " + choices)
+#     choices = 'clone, commit, branch, pull, merge, blame and stash'
+#     print("Commands to use: " + choices)
 
-    choose_command = input('Type in the command you want to use: ').lower()
+#     choose_command = input('Type in the command you want to use: ').lower()
 
-    dict = {
-        'clone': clone,
-        'commit': commit,
-        'branch': branch,
-        'pull': pull,
-        'fetch': fetch,
-        'merge': merge,
-        'reset': reset,
-        'blame': blame
-    }
+#     dict = {
+#         'clone': clone,
+#         'commit': commit,
+#         'branch': branch,
+#         'pull': pull,
+#         'fetch': fetch,
+#         'merge': merge,
+#         'reset': reset,
+#         'blame': blame
+#     }
 
-    dict.get(choose_command, lambda: "Invalid")()
+#     dict.get(choose_command, lambda: "Invalid")()
 
 def push_debit():
     run('add','debit.xlsx')
