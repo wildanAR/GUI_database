@@ -234,7 +234,32 @@ Rectangle {
         height: 800
         color: "#1f4f16"
 
-        
+        Rectangle {
+            id:buttonutang
+            width: 100
+            height: 50
+            radius: 50
+            color: '#3CB371'
+            anchors {
+                left:boxhrgdebit.left
+                bottom: showutang.bottom
+            }
+            Text {
+                text: "Selesai"
+                color: "black"
+                font.pixelSize: 20
+                anchors.centerIn: parent
+            }
+            MouseArea {
+                id:mouseareautang
+                anchors.fill: parent
+                onClicked: {
+                    // Aplikasi.jmlhprdk(txtjmlh.text)
+                    textfieldutang.text = ""
+
+                }
+            }
+        }
         Rectangle {
             id: btnselesaiproduk
             width: 100
@@ -394,6 +419,86 @@ Rectangle {
                 onAccepted: {
                     txthargakeluar.forceActiveFocus()
 
+                }
+            }
+        }
+        Text {
+            id:tulisanutang
+            text: "Utang:"
+            color: "white"
+            font.pixelSize: 15
+            font.bold: true
+            focus:true
+            anchors {
+                left: showutang.left
+                bottom: showutang.top
+                bottomMargin: 10
+            }
+        }
+        Rectangle {
+        id:showutang
+        color: "white"
+        width: 200
+        height: 40
+        visible: boxjmlh.visible
+        anchors {
+            left: boxkaskeluar.left
+            top: parent.top
+            topMargin: 50
+        }
+        Text {
+            id:texthutang
+            color: "black"
+            font.pixelSize: 15
+            font.bold: true
+            text: 'hutanngg'
+            anchors.fill: parent
+            anchors.centerIn: parent
+        }
+        }
+        Text {
+            id:textbayarutang
+            color: "white"
+            font.pixelSize: 15
+            font.bold: true
+            text:"Utang Dibayar:"
+            anchors {
+                left: bayarutang.left
+                top: tulisanutang.top
+            }
+        }
+        Rectangle {
+            id:bayarutang
+            color: "white"
+            width: 200
+            height: 40
+            visible: showutang.visible
+            anchors {
+                left: boxnamadebit.left
+                bottom: showutang.bottom
+            }
+            TextField {
+                id:textfieldutang
+                font.pixelSize: 15; 
+                font.bold: true
+                focus: true
+                anchors.fill : parent
+                placeholderText : "Utang Dibayar"
+                font.family : "Lato"
+                cursorPosition : 10
+                onAccepted: {
+                    Aplikasi.slothutang(textfieldutang.text)
+                    buttonutang.forceActiveFocus()
+                    textfieldutang.text = ""
+                    textfieldutang.forceActiveFocus()
+                    // Aplikasi.jmlhprdk(txtjmlh.text)
+                    // Aplikasi.namaprdk(txtnamadebit.text)
+                    // Aplikasi.hrgproduk(txthrgdebit.text)
+                    // Aplikasi.kaskeluar(txtkaskeluar.text)
+                    // txtjmlh.text = ""
+                    // txthrgdebit.text = ""
+                    // txtnamadebit.text = ""
+                    // txtkaskeluar.text = ""
                 }
             }
         }
@@ -580,6 +685,13 @@ Rectangle {
     }
     function pushtext(text) {
         txtpush.text = text;
+        if (txtpush.text === "tidak ada perubahan") {
+            txtpushgit.color = 'red';
+            }
+        else (txtpushgit.color = "yellow")
+    }
+    function tampilanHutang(text) {
+        texthutang.text = text;
     }
 
 
@@ -979,7 +1091,7 @@ Rectangle {
         }
         Text {
             id:txtpush
-            text: "tes"
+            text: ""
             color: "black"
             font.pixelSize: 20
             anchors.centerIn: parent
@@ -1012,5 +1124,6 @@ Rectangle {
                 
             }
     }
+    
     
 }

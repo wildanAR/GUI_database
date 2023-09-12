@@ -12,6 +12,7 @@ from open_value_excel import get_duit
 import database_toko as dt
 from sent_data import publish
 from git_toko import pull_debit, push_debit
+from utang import hutangToko
 import sys
 cek = 'TWS1000'
 #inisiasi quit button
@@ -39,6 +40,8 @@ class ListModel(QAbstractListModel):
     
 class Aplikasi(QQuickView):
     txtpush = ""
+    Hutang = ""
+    showHutang = pyqtSignal(str)
     git_push = pyqtSignal(str)
     Quit = pyqtSignal(str)
     Mini = pyqtSignal(str)
@@ -59,6 +62,7 @@ class Aplikasi(QQuickView):
         self.setTitle("Toko Plastik Solusa")
         self.show()
         vista = self.rootObject()
+        self.Hutang = hutangToko().nominalHutang()
         self.nama.connect(vista.namaproduk)
         self.stok.connect(vista.produk1)
         self.hrgdus.connect(vista.produk2)
@@ -67,6 +71,9 @@ class Aplikasi(QQuickView):
         self.etalaseproduk.connect(vista.produk5)
         self.list_id.connect(vista.list_id_qml)
         self.git_push.connect(vista.pushtext)
+        self.showHutang.connect(vista.tampilanHutang)
+
+        self.showHutang.emit(str(self.Hutang))
         list_items = get_id()
         model = ListModel(list_items)
         self.list_id.emit(model)
@@ -76,6 +83,12 @@ class Aplikasi(QQuickView):
        mini = str(value)
        if mini == 'minimize':
           self.showMinimized()
+
+    @pyqtSlot(str)
+    def slothutang(self,value):
+        self.Hutang = int(value)
+        self.Hutang = hutangToko().nambahHutang(self.Hutang)
+        self.showHutang.emit(str(self.Hutang))
 
     #push button
     @pyqtSlot(str)
@@ -170,6 +183,7 @@ class Aplikasi(QQuickView):
         s3 = minibtn
         self.Quit.emit(str(s1))
         self.Mini.emit(str(s3))
+        
         
 if __name__ == '__main__':
     stok_habis()

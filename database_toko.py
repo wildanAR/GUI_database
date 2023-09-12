@@ -166,7 +166,8 @@ def get_id():
     myresult = myresult.split()
     
     return myresult
-    
+
+
 cek = 'TWS1000'
 # arus_stok.stok_masuk(cek,5)
 # arus_stok.stok_keluar(cek, 2)
