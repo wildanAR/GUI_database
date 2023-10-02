@@ -13,6 +13,7 @@ import database_toko as dt
 from sent_data import publish
 from git_toko import pull_debit, push_debit_1, push_debit_2
 from utang import hutangToko
+from stat import ChartStat
 import sys
 cek = 'TWS1000'
 #inisiasi quit button
@@ -43,6 +44,7 @@ class Aplikasi(QQuickView):
     Hutang = ""
     showHutang = pyqtSignal(str)
     git_push = pyqtSignal(str)
+    stat = pyqtSignal(list)
     Quit = pyqtSignal(str)
     Mini = pyqtSignal(str)
     idprdk = pyqtSignal(str)
@@ -52,7 +54,7 @@ class Aplikasi(QQuickView):
     jualdus = pyqtSignal(str)
     jualpcs = pyqtSignal(str)
     etalaseproduk = pyqtSignal(str)
-    list_id = pyqtSignal(object)
+    # list_id = pyqtSignal(object)
 
     def __init__(self):
         super().__init__()
@@ -63,21 +65,27 @@ class Aplikasi(QQuickView):
         self.show()
         vista = self.rootObject()
         self.Hutang = hutangToko().nominalHutang()
+        self.stat.connect(vista.nameMonth)
         self.nama.connect(vista.namaproduk)
         self.stok.connect(vista.produk1)
         self.hrgdus.connect(vista.produk2)
         self.jualdus.connect(vista.produk3)
         self.jualpcs.connect(vista.produk4)
         self.etalaseproduk.connect(vista.produk5)
-        self.list_id.connect(vista.list_id_qml)
         self.git_push.connect(vista.pushtext)
         self.showHutang.connect(vista.tampilanHutang)
 
         self.showHutang.emit(str(self.Hutang))
-        list_items = get_id()
-        model = ListModel(list_items)
-        self.list_id.emit(model)
+        # list_items = get_id()
+        # model = ListModel(list_items)
+        # self.list_id.emit(model)
 
+    @pyqtSlot(str)
+    def namabulan(self, value):
+        a = value
+        print(a)
+        if a == 'statistik':
+            pass
     @pyqtSlot('QString')
     def minimize(self, value):
        mini = str(value)

@@ -276,7 +276,7 @@ def debit(namaprdk,jumlahprdk,hrgprdk,produk_belanja,jumlah_belanja,harga_belanj
                 
     if len(list_cell) == len(list_cell): 
         avg = keuntungan()
-        cell_keuntungan.value = f"Keuntungan({avg})="
+        cell_keuntungan.value = f"Keuntungan(20)="
         cell_omset.value = "Omset Harian = "
         cell_pengeluaran.value = "Pengeluaran Harian ="
         cell_lababersih.value = "selisih harian ="
@@ -301,7 +301,7 @@ def debit(namaprdk,jumlahprdk,hrgprdk,produk_belanja,jumlah_belanja,harga_belanj
         cell_F.value = f"=SUM({list_cell[-1]}:{'E' + str(len(ws['E']))})" 
         cell_G.value = f"=SUM({list_cellJ[-1]}:{'J' + str(len(ws['J']))})" 
         cell_K.value = f"={'F' + str(num_hrg)}-{'G' + str(num_hrg)}"
-        cell_hasil.value = f"={cell_F.coordinate}*{avg}%"
+        cell_hasil.value = f"={cell_F.coordinate}*{20}%"
         cell_hasil.number_format = 'Rp #,##0.00'
         ws.column_dimensions['G'].auto_size = True
         ws.column_dimensions['K'].auto_size = True

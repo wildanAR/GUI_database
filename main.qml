@@ -15,53 +15,7 @@ Rectangle {
     width: 1000
     height: 800
     color: "#1f4f16"
-    function list_id_qml(text) {
-        n7.model = text
-    }
     
-    
-    Rectangle {
-        id:listID
-        visible: false
-        width: 200
-        height: 300
-        color:'yellow'
-        anchors {
-            left: parent.left
-            top: parent.top
-            leftMargin: 50
-            topMargin: 50
-        }
-        ListView {
-            id:n7
-            anchors.fill: parent
-            model: 1
-            spacing: 10
-            anchors {
-                left: parent.left
-                leftMargin: 20
-                top: parent.top 
-                topMargin: 20
-            }
-            delegate: RoundButton {
-                width: 100
-                radius: 10
-                height: 50
-                anchors {
-                    topMargin: 20
-                }
-                Text {
-                    id:n8
-                    text: model.display
-                    focus: true
-                    anchors.centerIn: parent
-                }
-                onClicked: {
-                    console.log(("button clicked:",n8.text))
-                }
-            }
-        }
-    }
     Rectangle {
         id:buttonmini
         width: 100
@@ -189,43 +143,7 @@ Rectangle {
                 anchors.centerIn: parent
             }
     }
-    // Rectangle {
-    //     id: btnjual
-    //     width: 100
-    //     height: 50
-    //     radius: 50 // customize the radius here
-    //     color: '#3CB371'
-    //     anchors {
-    //         top: btndebit.bottom
-    //         right: btndebit.right
-    //         topMargin: 20
-    //     }
-    //     MouseArea {
-    //         anchors.fill: parent
-    //         onClicked: {
-    //             console.log("blm ada")
-    //             buttonbckjual.visible = true
-    //             listID.visible = true
-    //             debit.visible = false
-    //             buttonbckdebit.visible = false
-    //             boxjmlh.visible = false
-    //             boxnamadebit.visible = false
-    //             boxhrgdebit.visible = true
-    //             buttonexit.visible = false
-    //             btngudang.visible = false
-    //             btndebit.visible = false
-    //             btnjual.visible = false
-                
-                
-    //         }
-    //     }
-    //      Text {
-    //             text: "Debit"
-    //             color: "black"
-    //             font.pixelSize: 20
-    //             anchors.centerIn: parent
-    //         }
-    // }
+    
 
     Rectangle {
         id:debit
@@ -1124,6 +1042,144 @@ Rectangle {
                 
             }
     }
-    
+    Rectangle {
+        id: statbg
+        visible: false
+        width: 1000
+        height: 800
+        color: "#1f4f16"
+
+        ChartView {
+            id: chart
+            visible: true
+            title: "ini chart"
+            theme: ChartView.ChartThemeLight
+            anchors.fill: parent
+            LineSeries {
+            name: "July"
+            XYPoint { x: 0; y: 11 }
+            XYPoint { x: 1; y: 213 }
+            XYPoint { x: 2; y: 31 }
+            XYPoint { x: 3; y: 46 }
+            XYPoint { x: 4; y: 51 }
+            XYPoint { x: 5; y: 51 }
+            XYPoint { x: 6; y: 51 }
+            XYPoint { x: 7; y: 51 }
+            XYPoint { x: 8; y: 51 }
+            XYPoint { x: 9; y: 51 }
+            XYPoint { x: 10; y: 51 }
+            XYPoint { x: 11; y: 51 }
+            XYPoint { x: 12; y: 51 }
+            XYPoint { x: 13; y: 51 }
+            XYPoint { x: 14; y: 51 }
+            XYPoint { x: 15; y: 51 }
+            XYPoint { x: 16; y: 51 }
+            XYPoint { x: 17; y: 51 }
+            XYPoint { x: 18; y: 51 }
+            XYPoint { x: 19; y: 51 }
+            XYPoint { x: 20; y: 51 }
+            XYPoint { x: 21; y: 51 }
+            XYPoint { x: 22; y: 51 }
+            XYPoint { x: 23; y: 51 }
+            XYPoint { x: 24; y: 51 }
+            XYPoint { x: 25; y: 51 }
+            XYPoint { x: 26; y: 51 }
+            XYPoint { x: 27; y: 51 }
+            XYPoint { x: 28; y: 51 }
+            XYPoint { x: 29; y: 51 }
+            XYPoint { x: 30; y: 51 }
+            }
+
+            // LineSeries {
+            //     name: "Agustus"
+            // XYPoint { x: 0; y: 43 }
+            // XYPoint { x: 1; y: 21 }
+            // XYPoint { x: 2; y: 33 }
+            // XYPoint { x: 3; y: 45 }
+            // XYPoint { x: 4; y: 51 }
+            // }
+
+            // LineSeries {
+            //     name: "September"
+            // XYPoint { x: 0; y: 130 }
+            // XYPoint { x: 1; y: 210}
+            // XYPoint { x: 2; y: 330 }
+            // XYPoint { x: 3; y: 450 }
+            // XYPoint { x: 4; y: 510 }
+            // }
+            
+            ValueAxis {
+                id: xAxis
+                titleText: "X Axis"
+            }
+
+            ValueAxis {
+                id: yAxis
+                titleText: "Y Axis"
+            }
+
+        }
+    }
+    Rectangle {
+        id: buttonbckstat
+        width: 100
+        height: 50
+        visible: false
+        radius: 50 // customize the radius here
+        color: '#3CB371'
+        anchors {
+            right: parent.right
+            rightMargin: 50
+            top: parent.top
+            topMargin: 50
+        }
+
+        MouseArea {
+            anchors.fill: parent
+            onClicked: {
+            statbg.visible = false
+            buttonbckstat.visible = false
+            btnstat.visible = true
+            }
+        }
+        Image {
+            source: "logout.png"
+            anchors.centerIn: parent
+            width: 30
+            height: 30
+        }
+    }
+    function nameMonth(text) {
+        text = text;
+        }
+    Rectangle {
+        id: btnstat
+        width: 100
+        height:50
+        radius:50
+        color: '#3CB371'
+        anchors {
+            top: btndebit.bottom
+            right: btndebit.right
+            topMargin: 20
+        }
+        MouseArea {
+            anchors.fill: parent
+            onClicked: {
+                console.log("blm ada")
+                statbg.visible = true
+                buttonbckstat.visible = true
+                btnstat.visible = false
+                Aplikasi.namabulan('statistik')
+            }
+        }
+        Text {
+                text: "Statistik"
+                color: "black"
+                font.pixelSize: 20
+                anchors.centerIn: parent
+            }
+        
+    }
     
 }
